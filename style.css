@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root{
+    --Very-dark-desaturated-blue1: hsl(222, 26%, 31%);
+--Very-dark-desaturated-blue2 : hsl(223, 31%, 20%);
+--Very-dark-desaturated-blue3: hsl(224, 36%, 15%);
+--Desaturated-dark-blue: hsl(225, 21%, 49%);
+--Desaturated-dark-blue: hsl(224, 28%, 35%);
+--Red: hsl(6, 63%, 50%);
+--Dark-red: hsl(6, 70%, 34%);
+--Light-grayish-orange: hsl(30, 25%, 89%);
+--Grayish-orange: hsl(28, 16%, 65%);
+--Very-dark-grayish-blue: hsl(221, 14%, 31%);
+--White: hsl(0, 0, 100%);
+--Light-gray: hsl(0, 0%, 90%);
+--Grayish-red: hsl(0, 5%, 81%);
+--Very-light-gray: hsl(0, 0%, 93%);
+--Dark-moderate-cyan: hsl(185, 42%, 37%);
+--Very-dark-cyan: hsl(185, 58%, 25%);
+--Orange: hsl(25, 98%, 40%);
+--Dark-orange: hsl(25, 99%, 27%);
+--Light-grayish-yellow: hsl(45, 7%, 89%);
+--Dark-grayish-orange: hsl(35, 11%, 61%);
+--Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+--White: hsl(0, 0, 100%);
+--Very-dark-violet: hsl(268, 75%, 9%);
+--Very-dark-violet: hsl(268, 71%, 12%);
+--Dark-violet: hsl(281, 89%, 26%);
+--Vivid-magenta: hsl(285, 91%, 52%);
+--Pure-cyan: hsl(176, 100%, 44%);
+--Soft-cyan: hsl(177, 92%, 70%);
+--Very-dark-violet: hsl(268, 47%, 21%);
+--Dark-magenta: hsl(290, 70%, 36%);
+--Light-yellow: hsl(52, 100%, 62%);
+--Very-dark-blue: hsl(198, 20%, 13%);
+--White: hsl(0, 0, 100%);
+--font-family: 'League Spartan', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Desaturated-dark-blue);
+    font-family: var(--font-family);
+}
+.calc-container{
+    width: 365px;
+    margin: 10rem auto;
+}
+.calculator{
+    display: grid;
+}
+.calc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.calc h3{
+    margin-top: 1rem;
+    color: white;
+}
+.display{
+    margin-bottom: 1rem;
+    background-color: var(--Very-dark-desaturated-blue3);
+    min-height: 5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+}
+.theme{
+    display: flex;
+}
+.theme h6{
+    margin: 1.2rem 1rem 0 0;
+    color: white;
+}
+.theme p{
+    color: white;
+    font-size: 0.7rem;
+}
+.theme p span{
+    display: inline-block;
+    margin: 0.4rem 0.4rem 0;
+}
+.calculator-keys{
+    background-color: var(--Very-dark-desaturated-blue2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-row-gap: 0.9rem;
+    grid-column-gap: 0.9rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.calculator-keys > button{
+    cursor: pointer;
+    font-family: var(--font-family);
+    height: 2.5rem;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--Desaturated-dark-blue);
+    border: transparent;
+    border-radius: 0.3rem;
+}
+.calculator-keys > button:hover{
+    background-color: var(--Desaturated-dark-blue);
+    color: white;
+}
+.reset{
+    grid-column: 1 / span 2;
+    background-color: var(--Desaturated-dark-blue);
+    color: white !important;
+    font-size: 1rem !important;
+}
+.reset:hover{
+    background-color: var(--Red) !important;
+}
+.equals{
+    grid-column: 3 / span 2;
+    background-color: var(--Red);
+    color: white !important;
+    font-size: 1rem !important;
+}
+.equals:hover{
+    background-color: var(--Dark-red)!important;
+    color: var(--Desaturated-dark-blue) !important;
+}
+.del{
+    background-color: var(--Desaturated-dark-blue);
+    color: white !important;
+    font-size: 1rem !important;
+}
+.del:hover{
+    background-color: var(--Red) !important;
+}
+#checkbox{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.toggle-ball{
+    background-color: var(--Very-dark-desaturated-blue3);
+    width: 3.5rem;
+    height: 1.4rem;
+    position: relative;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+.toggle-ball:after{
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 0.9rem;
+    border-radius: 0.5rem;
+    background-color: var(--Red);
+    transition: transform 0.2 linear;
+}
+#checkbox:checked + .toggle-ball:after{
+    background-color: var(--Red);
+    transform: translateX(100%);
+}

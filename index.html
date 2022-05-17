@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="calc-container">
+    <div class="calc">
+      <h3>calc</h3>
+      <div class="theme">
+        <h6>THEME</h6>
+        <span class="toggle-container">
+          <p><span>1</span>
+          <span>2</span>
+        <span>3</span></p>
+          <label for="checkbox">
+            <input type="checkbox" id="checkbox">
+            <div class="toggle-ball">
+            </div>
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="calculator">
+    <div class="display">0</div>
+    <div class="calculator-keys">
+      <button data-type="number">7</button>
+      <button data-type="number">8</button>
+      <button data-type="number">9</button>
+      <button data-type="delete" class="del">DEL</button>
+      <button data-type="number">4</button>
+      <button data-type="number">5</button>
+      <button data-type="number">6</button>
+      <button data-type="operator">+</button>
+      <button data-type="number">1</button>
+      <button data-type="number">2</button>
+      <button data-type="number">3</button>
+      <button data-type="operator">-</button>
+      <button data-type="decimal">.</button>
+      <button data-type="number">0</button>
+      <button data-type="operator">/</button>
+      <button data-type="operator">x</button>
+      <button data-type="clear" class="reset">RESET</button>
+      <button data-type="equate" class="equals">=</button>
+    </div>
+  </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
